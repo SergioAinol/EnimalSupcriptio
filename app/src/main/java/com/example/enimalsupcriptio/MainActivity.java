@@ -11,6 +11,9 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button btnNuevo;
+    Button btnMofificar;
+    private View view;
+    private View v;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         btnNuevo=findViewById(R.id.btnNuevo);
+        btnMofificar=findViewById(R.id.btnModificar);
 
     }
 
@@ -27,4 +31,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent i = new Intent(MainActivity.this,MainNuevo.class);
         startActivity(i);
     }
+
+
+    public void onClick1 (View view1) {
+        Toast.makeText(getApplicationContext(),"Cambiando a Modificar",Toast.LENGTH_LONG).show();
+        Intent i = new Intent(MainActivity.this,MainModificar.class);
+        startActivity(i);
+    }
+
 }
