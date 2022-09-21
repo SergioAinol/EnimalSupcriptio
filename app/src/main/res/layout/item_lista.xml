@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="1dp">
+
+        <LinearLayout
+            android:layout_width="157dp"
+            android:layout_height="459dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtNumeroLista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:text="Numero"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtTipoAnimalLista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_weight="0"
+                android:text="Tipo de Animal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtAreteLista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="49dp"
+                android:text="Arete"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtParicionesLista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="N° de Pariciones"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtFechaLista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Fecha y Tipo de Sexo"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtHijosLista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="Hija o Hijo de"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtNacimientoLista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:text="Año de Nacimiento"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/radioBSeleccionarLista"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_weight="15"
+                android:text="Seleccionar" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="162dp"
+            android:layout_height="455dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextNumberNumero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="4"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editTextTipo"
+                android:layout_width="90dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/editTextNumberArete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="4"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editTextNumberPariciones"
+                android:layout_width="67dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editTextFecha"
+                android:layout_width="90dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/editTextHijos"
+                android:layout_width="90dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/editTextNacimiento"
+                android:layout_width="90dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
