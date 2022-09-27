@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //obtuve el reciclador
         RecyclerView recycler = (RecyclerView) findViewById(R.id.reciclador);
         //como quiero mostrarlo
-        recycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
+        recycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         //recycler.setLayoutManager(new GridLayoutManager(this,3));
 
         listaDatos= new ArrayList<String>();

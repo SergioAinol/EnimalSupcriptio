@@ -56,15 +56,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolderDatos>{
             itemRadioBtn=itemView.findViewById(R.id.radioBSeleccionarLista);
         }
 
-        public void asignarDatos(String s)
-        {
-            itemNumero.setText(s);
-            itemTipoAnimal.setText(s);
-            itemArete.setText(s);
-            itemPariciones.setText(s);
-            itemFecha.setText(s);
-            itemHijos.setText(s);
-            itemNacimiento.setText(s);
+        public void asignarDatos(String s){
 
         }
     }

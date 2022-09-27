@@ -14,7 +14,7 @@
         <LinearLayout
             android:layout_width="157dp"
             android:layout_height="459dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="20dp"
             android:orientation="vertical">
 
@@ -23,7 +23,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="10dp"
+                android:paddingLeft="90dp"
                 android:text="Numero"
                 android:textSize="16sp" />
 
@@ -31,8 +32,9 @@
                 android:id="@+id/txtTipoAnimalLista"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:layout_weight="0"
+                android:paddingLeft="40dp"
                 android:text="Tipo de Animal"
                 android:textSize="16sp" />
 
@@ -41,6 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="49dp"
+                android:paddingLeft="110dp"
                 android:text="Arete"
                 android:textSize="16sp" />
 
@@ -49,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
+                android:paddingLeft="30dp"
                 android:text="N° de Pariciones"
                 android:textSize="16sp" />
 
@@ -56,7 +60,7 @@
                 android:id="@+id/txtFechaLista"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="35dp"
                 android:text="Fecha y Tipo de Sexo"
                 android:textSize="16sp" />
 
@@ -64,7 +68,8 @@
                 android:id="@+id/txtHijosLista"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="39dp"
+                android:paddingLeft="50dp"
                 android:text="Hija o Hijo de"
                 android:textSize="16sp" />
 
@@ -72,7 +77,8 @@
                 android:id="@+id/txtNacimientoLista"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="45dp"
+                android:layout_marginTop="35dp"
+                android:paddingLeft="10dp"
                 android:text="Año de Nacimiento"
                 android:textSize="16sp" />
 
@@ -80,6 +86,7 @@
                 android:id="@+id/radioBSeleccionarLista"
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
+                android:layout_marginLeft="40dp"
                 android:layout_weight="15"
                 android:text="Seleccionar" />
 
