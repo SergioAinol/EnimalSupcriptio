@@ -1,7 +1,6 @@
 package com.example.enimalsupcriptio;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -11,15 +10,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import java.util.ArrayList;
+import com.example.enimalsupcriptio.BaseDatos.DataBaseQuerryAnimal;
+import com.example.enimalsupcriptio.Modelos.Animal;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btnNuevo;
     Button btnMofificar;
     private View view;
-    ArrayList<String> listaDatos;
+    List<Animal> listaDatos;
     RecyclerView reciclador;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,24 +34,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnNuevo=findViewById(R.id.btnNuevo);
         btnMofificar=findViewById(R.id.btnModificar);
 
-        //obtuve el reciclador
-        RecyclerView recycler = (RecyclerView) findViewById(R.id.reciclador);
-        //como quiero mostrarlo
-        recycler.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
-        //recycler.setLayoutManager(new GridLayoutManager(this,3));
+        DataBaseQuerryAnimal dbQeryAnimal1 = new DataBaseQuerryAnimal(getBaseContext());
 
-        listaDatos= new ArrayList<String>();
+        listaDatos=dbQeryAnimal1.obtenerAnimales();
+        Adaptador adapter = new Adaptador(listaDatos);
 
-        //simular el llenado de datos
-        for(int i=0; i<=60;i++){
-            listaDatos.add("Mi Dato #"+i+"");
-        }
-
-        //utilizamos el adaptador
-        Adaptador adapter= new Adaptador(listaDatos);
-        recycler.setAdapter(adapter);
+        //obtener el reciclador
+        reciclador= findViewById(R.id.recicladorAnimal);
+        reciclador.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        reciclador.setAdapter(adapter);
 
     }
+
 
     @Override
     public void onClick(View view) {

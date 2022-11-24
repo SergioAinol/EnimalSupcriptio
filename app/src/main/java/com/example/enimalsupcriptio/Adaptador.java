@@ -3,28 +3,28 @@ package com.example.enimalsupcriptio;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
+import com.example.enimalsupcriptio.Modelos.Animal;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolderDatos>{
 
-    ArrayList<String> listaDatos;
+    List<Animal> listaDatos;
 
-    public Adaptador(ArrayList<String> listaDatos) {
+    public Adaptador(List<Animal> listaDatos) {
         this.listaDatos = listaDatos;
     }
 
     @NonNull
     @Override
     public Adaptador.ViewHolderDatos onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_lista,null,false);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_lista_animal,null,false);
         return new ViewHolderDatos(view);
     }
 
@@ -38,26 +38,34 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.ViewHolderDatos>{
         return listaDatos.size();
     }
 
-    public class ViewHolderDatos extends RecyclerView.ViewHolder{
+    public static class ViewHolderDatos extends RecyclerView.ViewHolder{
 
-        TextView itemNumero,itemTipoAnimal,itemArete,itemPariciones,itemFecha,itemHijos,itemNacimiento ;
-        RadioButton itemRadioBtn;
+        TextView  numero, tipo, arete, pariciones, fechaTipoSexo, hijoHija, anioNacimiento, raza, observaciones;
 
         public ViewHolderDatos(@NonNull View itemView)
         {
             super(itemView);
-            itemNumero=itemView.findViewById(R.id.txtNumeroLista);
-            itemTipoAnimal=itemView.findViewById(R.id.txtTipoAnimalLista);
-            itemArete=itemView.findViewById(R.id.txtAreteLista);
-            itemPariciones=itemView.findViewById(R.id.txtParicionesLista);
-            itemFecha=itemView.findViewById(R.id.txtFechaLista);
-            itemHijos=itemView.findViewById(R.id.txtHijosLista);
-            itemNacimiento=itemView.findViewById(R.id.txtNacimientoLista);
-            itemRadioBtn=itemView.findViewById(R.id.radioBSeleccionarLista);
+            numero=itemView.findViewById(R.id.textViewNumero);
+            tipo=itemView.findViewById(R.id.textViewTipo);
+            arete=itemView.findViewById(R.id.textViewArete);
+            pariciones=itemView.findViewById(R.id.textViewPariciones);
+            fechaTipoSexo=itemView.findViewById(R.id.textViewFechaTipoSexo);
+            hijoHija=itemView.findViewById(R.id.textViewHijoHija);
+            anioNacimiento=itemView.findViewById(R.id.textViewAnioNacimiento);
+            raza=itemView.findViewById(R.id.textViewRaza);
+            observaciones=itemView.findViewById(R.id.textViewObservaciones);
         }
 
-        public void asignarDatos(String s){
-
+        public void asignarDatos(Animal a){
+            numero.setText(a.getNumero());
+            tipo.setText(a.getTipo());
+            arete.setText(a.getArete());
+            pariciones.setText(a.getPariciones());
+            fechaTipoSexo.setText(a.getFechaTipoSexo());
+            hijoHija.setText(a.getHijoHija());
+            anioNacimiento.setText(a.getAnioNacimiento());
+            raza.setText(a.getRaza());
+            observaciones.setText(a.getObservaciones());
         }
     }
 }
